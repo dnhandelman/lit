@@ -1,10 +1,10 @@
 function promptMe() {
-    let button1 = prompt("Do you have a soul?");
-    if (button1 == "yes" || button1 == "Yes" || button1 == "yeah") {
-        alert("Congratulations, please enjoy."),
+    let button1 = prompt("do you have a soul?");
+    if (button1 == "yes" || button1 == "Yes") {
+        alert("congratulations."),
         window.location = "./Poem1/index.html";
     } else {
-        alert("Entrance denied.");
+        alert("entrance denied.");
     }
 
     // #f00f00
