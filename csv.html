@@ -1,0 +1,19 @@
+<h1>CSV processing</h1>
+<textarea id="input" placeholder="paste a csv here"></textarea>
+<pre id="output"></pre>
+
+<script type="module">
+// https://www.skypack.dev/view/papaparse
+import papaparse from 'https://cdn.skypack.dev/papaparse';
+console.log("hi")
+
+const input = document.querySelector("#input")
+const output = document.querySelector("#output")
+
+input.addEventListener("change", (e) => {
+    console.log("change", e.target, e.target.value)
+    const raw = e.target.value
+    const csv = papaparse.parse(raw)
+    output.innerText = JSON.stringify(csv, null, 2)
+})
+</script>
